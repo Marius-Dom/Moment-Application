@@ -152,6 +152,11 @@ namespace Moment_Application
             0,
             0,
             0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(177, 21);
             this.numericUpDown2.TabIndex = 8;
@@ -189,6 +194,11 @@ namespace Moment_Application
             0,
             0,
             0});
+            this.numericUpDown3.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(117, 21);
             this.numericUpDown3.TabIndex = 10;
@@ -200,14 +210,19 @@ namespace Moment_Application
             // 
             // numericUpDown4
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(194, 169);
+            this.numericUpDown4.Location = new System.Drawing.Point(138, 169);
             this.numericUpDown4.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
+            this.numericUpDown4.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(163, 21);
+            this.numericUpDown4.Size = new System.Drawing.Size(219, 21);
             this.numericUpDown4.TabIndex = 12;
             this.numericUpDown4.Value = new decimal(new int[] {
             700,
@@ -221,9 +236,9 @@ namespace Moment_Application
             this.label5.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.Location = new System.Drawing.Point(41, 172);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 14);
+            this.label5.Size = new System.Drawing.Size(91, 14);
             this.label5.TabIndex = 11;
-            this.label5.Text = "我上一次考试的满分是";
+            this.label5.Text = "考试的满分是";
             // 
             // confirmButton
             // 
@@ -234,6 +249,7 @@ namespace Moment_Application
             this.confirmButton.TabIndex = 13;
             this.confirmButton.Text = "初始化";
             this.confirmButton.UseVisualStyleBackColor = true;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // label6
             // 

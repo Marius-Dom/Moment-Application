@@ -15,13 +15,12 @@ namespace Moment_Application
         [STAThread]
         static void Main()
         {
-            string dataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/Moment/DataArchive/";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (!Directory.Exists(dataPath))
+            if (!Directory.Exists(GlobalVariable.dataPath))
                 Application.Run(new InitForm());
 
-            if (!File.Exists(dataPath + "Information.json"))
+            if (!File.Exists(GlobalVariable.dataPath + "Information.json"))
                 Application.Run(new InitForm());
 
             Application.Run(new MainForm());
