@@ -111,7 +111,7 @@ namespace Moment_Application
             this.textBox1.Location = new System.Drawing.Point(97, 106);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(270, 21);
-            this.textBox1.TabIndex = 4;
+            this.textBox1.TabIndex = 0;
             // 
             // label2
             // 
@@ -159,7 +159,7 @@ namespace Moment_Application
             this.confirmButton.Location = new System.Drawing.Point(148, 250);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(91, 35);
-            this.confirmButton.TabIndex = 13;
+            this.confirmButton.TabIndex = 5;
             this.confirmButton.Text = "初始化";
             this.confirmButton.UseVisualStyleBackColor = true;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
@@ -180,7 +180,7 @@ namespace Moment_Application
             this.colorSelectButton1.Location = new System.Drawing.Point(344, 286);
             this.colorSelectButton1.Name = "colorSelectButton1";
             this.colorSelectButton1.Size = new System.Drawing.Size(25, 25);
-            this.colorSelectButton1.TabIndex = 15;
+            this.colorSelectButton1.TabIndex = 6;
             this.colorSelectButton1.UseVisualStyleBackColor = false;
             this.colorSelectButton1.Click += new System.EventHandler(this.colorSelectButton1_Click);
             // 
@@ -190,37 +190,45 @@ namespace Moment_Application
             this.colorSelectButton2.Location = new System.Drawing.Point(375, 286);
             this.colorSelectButton2.Name = "colorSelectButton2";
             this.colorSelectButton2.Size = new System.Drawing.Size(25, 25);
-            this.colorSelectButton2.TabIndex = 16;
+            this.colorSelectButton2.TabIndex = 7;
             this.colorSelectButton2.UseVisualStyleBackColor = false;
             this.colorSelectButton2.Click += new System.EventHandler(this.colorSelectButton2_Click);
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(204, 133);
+            this.textBox2.MaxLength = 3;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(163, 21);
-            this.textBox2.TabIndex = 17;
+            this.textBox2.TabIndex = 1;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(148, 160);
+            this.textBox3.MaxLength = 3;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(219, 21);
-            this.textBox3.TabIndex = 18;
+            this.textBox3.TabIndex = 2;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(190, 187);
+            this.textBox4.MaxLength = 3;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(177, 21);
-            this.textBox4.TabIndex = 19;
+            this.textBox4.TabIndex = 3;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(260, 214);
+            this.textBox5.MaxLength = 4;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(107, 21);
-            this.textBox5.TabIndex = 20;
+            this.textBox5.TabIndex = 4;
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // InitForm
             // 
