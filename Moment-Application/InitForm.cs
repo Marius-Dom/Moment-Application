@@ -121,6 +121,7 @@ namespace Moment_Application
                 initialization = true,
                 nickname = textBox1.Text,
                 darkModeOn = darkModeOn,
+                aim = int.Parse(textBox5.Text),
                 score = new Information.Score
                 {
                     improve = int.Parse(textBox4.Text),
