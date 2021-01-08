@@ -8,8 +8,6 @@ namespace Moment_Application
 {
     public class Exams
     {
-        public DateTime time { get; set; }
-        public string name { get; set; }
-        public int score { get; set; }
+        public List<int> score { get; set; }
     }
 }

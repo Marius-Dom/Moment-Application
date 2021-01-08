@@ -44,10 +44,10 @@ namespace Moment_Application
             if (result == DialogResult.Yes)
             {
                 darkModeOn = true;
-                Color myGray = Color.FromArgb(50, 50, 50);
-                Color myBlack = Color.FromArgb(30, 30, 30);
-                this.BackColor = myBlack;
-                backbroadBox.BackColor = myGray;
+                Color mymyGray = Color.FromArgb(50, 50, 50);
+                Color mymyBlack = Color.FromArgb(30, 30, 30);
+                this.BackColor = mymyBlack;
+                backbroadBox.BackColor = mymyGray;
                 mainLabel1.ForeColor = Color.White;
                 mainLabel2.ForeColor = Color.White;
                 label1.ForeColor = Color.White;
@@ -56,17 +56,17 @@ namespace Moment_Application
                 label4.ForeColor = Color.White;
                 label5.ForeColor = Color.White;
                 label6.ForeColor = Color.White;
-                textBox1.BackColor = myGray;
+                textBox1.BackColor = mymyGray;
                 textBox1.ForeColor = Color.White;
-                textBox2.BackColor = myGray;
+                textBox2.BackColor = mymyGray;
                 textBox2.ForeColor = Color.White;
-                textBox3.BackColor = myGray;
+                textBox3.BackColor = mymyGray;
                 textBox3.ForeColor = Color.White;
-                textBox4.BackColor = myGray;
+                textBox4.BackColor = mymyGray;
                 textBox4.ForeColor = Color.White;
-                textBox5.BackColor = myGray;
+                textBox5.BackColor = mymyGray;
                 textBox5.ForeColor = Color.White;
-                confirmButton.BackColor = myGray;
+                confirmButton.BackColor = mymyGray;
                 confirmButton.ForeColor = Color.White;
             }
         }
@@ -131,16 +131,31 @@ namespace Moment_Application
 
             Exams exam = new Exams
             {
-                time = new DateTime(),
-                name = "InitializationExam",
-                score = int.Parse(textBox2.Text)
+                score = new List<int>() { int.Parse(textBox2.Text) }
             };
 
             Directory.CreateDirectory(GlobalVariable.dataPath);
             File.WriteAllText(GlobalVariable.dataPath + "Information.json", JObject.FromObject(information).ToString());
 
             Directory.CreateDirectory(GlobalVariable.dataPath + "Exams/");
-            File.WriteAllText(GlobalVariable.dataPath + "Exams/Exam-Initialization.json", JObject.FromObject(exam).ToString());
+            File.WriteAllText(GlobalVariable.dataPath + "Exams/Exam.json", JObject.FromObject(exam).ToString());
+
+            File.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/Moment/README.txt", 
+                "# This is a warning message form the applications' anthor\n" +
+                "# English\n" +
+                "This Directory is a Data Storge folder for the \"Moment Application\". All of the Files were created by the application The application MAY WON'T WORK ANYMORE if the files changed incorrectly, so PLEASE DO NOT CHANGE ANYTHING in there.\n" +
+                "\n" +
+                "# 中文 (Chinese) \n" +
+                "# Translated by Google Translate\n" +
+                "该目录是\" Moment Application \"的Data Storge文件夹。 所有文件都是由应用程序创建的。如果文件更改错误，则该应用程序可能无法再使用，因此请不要在其中进行任何更改。\n" +
+                "\n" +
+                "# Deutsch (German)\n" +
+                "# Translated by Google Translate\n" +
+                "Dieses Verzeichnis ist ein Data Storge-Ordner für die \"Moment - Anwendung\". Alle Dateien wurden von der Anwendung erstellt. Die Anwendung KANN NICHT MEHR FUNKTIONIEREN, wenn sich die Dateien falsch geändert haben. BITTE ÄNDERN SIE BITTE NICHTS.\n" +
+                "\n" +
+                "# Русский (Russian)\n" +
+                "# Translated by Google Translate\n" +
+                "Этот каталог является папкой хранилища данных для  \"Moment Application\". Все файлы были созданы приложением. Приложение МОЖЕТ НЕ РАБОТАТЬ БОЛЬШЕ, если файлы были изменены некорректно, поэтому, ПОЖАЛУЙСТА, НИЧЕГО НЕ МЕНЯЙТЕ в нем.");
 
             isAppClose = true;
             this.Close();
