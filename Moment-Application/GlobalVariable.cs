@@ -9,5 +9,6 @@ namespace Moment_Application
     public class GlobalVariable
     {
         public static string dataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/Moment/DataArchive/";
+        public static Information mainInformation = null;
     }
 }

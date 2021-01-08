@@ -10,6 +10,7 @@ namespace Moment_Application
     {
         public bool initialization { get; set; }
         public string nickname { get; set; }
+        public int aim { get; set; }
         public bool darkModeOn { get; set; }
         public Score score { get; set; }
 
