@@ -16,6 +16,9 @@ namespace Moment_Application
     public partial class MainForm : Form
     {
         private DayData dayData = null;
+
+        public static MainForm mainForm;
+
         public MainForm()
         {
             InitializeComponent();
@@ -23,6 +26,8 @@ namespace Moment_Application
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            mainForm = this;
+
             string dateToday = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString();
 
             if (!Directory.Exists(GlobalVariable.dataPath + "DaysDatas"))
@@ -118,9 +123,11 @@ namespace Moment_Application
                 button1.BackColor = myBlack;
                 button2.BackColor = myBlack;
                 button3.BackColor = myBlack;
+                button4.BackColor = myBlack;
                 button1.ForeColor = Color.White;
                 button2.ForeColor = Color.White;
                 button3.ForeColor = Color.White;
+                button4.ForeColor = Color.White;
             }
         }
 
@@ -243,6 +250,37 @@ namespace Moment_Application
         private void button2_Click(object sender, EventArgs e)
         {
             new ExamsForm().Show(this);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new Mindfulness().Show();
+            this.Hide();
+        }
+
+        public void flash()
+        {
+            string dateToday = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString();
+            string todayDataPath = GlobalVariable.dataPath + "DaysDatas/DayData-" + dateToday + ".json";
+
+            dayData = JObject.Parse(File.ReadAllText(todayDataPath)).ToObject<DayData>();
+
+            label1.Text = "你好," + GlobalVariable.mainInformation.nickname + ".   今日总共已学习:  " + dayData.time.ToString() + " 分钟.";
+
+            if (GlobalVariable.mainInformation.aim > dayData.time)
+            {
+                label4.Text = "还有  " + (GlobalVariable.mainInformation.aim - dayData.time).ToString() + "分钟  完成今日的学习任务.";
+            }
+            else if (GlobalVariable.mainInformation.aim == dayData.time)
+            {
+                label4.Text = "今日学习任务已完成!";
+            }
+            else
+            {
+                label4.Text = "今日学习任务已完成,并且比目标多学" + (dayData.time - GlobalVariable.mainInformation.aim).ToString() + "分钟!";
+            }
+
+            label3.Text = "学习时间管理软件  " + dateToday;
         }
     }
 }

@@ -12,6 +12,7 @@ namespace Moment_Application
         public string nickname { get; set; }
         public int aim { get; set; }
         public bool darkModeOn { get; set; }
+        public bool unCompulsoryMindfulness { get; set; }
         public Score score { get; set; }
 
         public class Score

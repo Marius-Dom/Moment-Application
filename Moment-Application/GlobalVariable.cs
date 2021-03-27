@@ -10,5 +10,6 @@ namespace Moment_Application
     {
         public static string dataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/Moment/DataArchive/";
         public static Information mainInformation = null;
+        public static int MindfulnessTime = 0;
     }
 }

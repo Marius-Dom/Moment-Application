@@ -53,6 +53,7 @@ namespace Moment_Application
                 textBox2.ForeColor = Color.White;
                 textBox3.ForeColor = Color.White;
                 textBox5.ForeColor = Color.White;
+                checkBox1.ForeColor = Color.White;
 
             }
             textBox1.Text = GlobalVariable.mainInformation.score.maxScore.ToString();
@@ -60,6 +61,7 @@ namespace Moment_Application
             textBox3.Text = GlobalVariable.mainInformation.score.improve.ToString();
             textBox5.Text = GlobalVariable.mainInformation.nickname.ToString();
             label7.Text = "程序版本: " + Application.ProductVersion;
+
             if(GlobalVariable.mainInformation.darkModeOn)
             {
                 radioButton2.Checked = true;
@@ -67,6 +69,11 @@ namespace Moment_Application
             else
             {
                 radioButton1.Checked = true;
+            }
+
+            if(GlobalVariable.mainInformation.unCompulsoryMindfulness)
+            {
+                checkBox1.Checked = true;
             }
         }
 
@@ -142,6 +149,7 @@ namespace Moment_Application
                     initialization = true,
                     nickname = textBox5.Text,
                     darkModeOn = radioButton2.Checked,
+                    unCompulsoryMindfulness = checkBox1.Checked,
                     aim = int.Parse(textBox2.Text),
                     score = new Information.Score
                     {

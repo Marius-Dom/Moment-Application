@@ -29,8 +29,8 @@ namespace Moment_Application
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@ namespace Moment_Application
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -97,17 +98,17 @@ namespace Moment_Application
             // 
             this.MainChart.BackColor = System.Drawing.Color.Transparent;
             this.MainChart.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea2.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "MainChartArea";
-            this.MainChart.ChartAreas.Add(chartArea2);
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "MainChartArea";
+            this.MainChart.ChartAreas.Add(chartArea1);
             this.MainChart.Location = new System.Drawing.Point(21, 153);
             this.MainChart.Name = "MainChart";
-            series2.BorderWidth = 5;
-            series2.ChartArea = "MainChartArea";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            series2.Name = "MainSeries";
-            this.MainChart.Series.Add(series2);
+            series1.BorderWidth = 5;
+            series1.ChartArea = "MainChartArea";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            series1.Name = "MainSeries";
+            this.MainChart.Series.Add(series1);
             this.MainChart.Size = new System.Drawing.Size(475, 209);
             this.MainChart.TabIndex = 7;
             this.MainChart.Text = "近一周学习时间数据";
@@ -222,13 +223,23 @@ namespace Moment_Application
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(375, 360);
+            this.button3.Location = new System.Drawing.Point(375, 114);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(101, 33);
             this.button3.TabIndex = 12;
             this.button3.Text = "图像导出";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(210, 114);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(91, 33);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "开始正念";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox3
             // 
@@ -272,6 +283,7 @@ namespace Moment_Application
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(521, 558);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox3);
@@ -320,6 +332,7 @@ namespace Moment_Application
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

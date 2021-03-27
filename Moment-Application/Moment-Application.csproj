@@ -107,6 +107,24 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mindfulness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mindfulness.Designer.cs">
+      <DependentUpon>Mindfulness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MindfulnessBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MindfulnessBack.Designer.cs">
+      <DependentUpon>MindfulnessBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MindfulnessFront.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MindfulnessFront.Designer.cs">
+      <DependentUpon>MindfulnessFront.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingForm.cs">
@@ -123,6 +141,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mindfulness.resx">
+      <DependentUpon>Mindfulness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MindfulnessBack.resx">
+      <DependentUpon>MindfulnessBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MindfulnessFront.resx">
+      <DependentUpon>MindfulnessFront.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
